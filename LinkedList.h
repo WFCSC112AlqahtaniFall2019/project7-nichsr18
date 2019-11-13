@@ -13,7 +13,7 @@ public:
     Data data; // object at node
     Node *next; // pointer to next node
 
-    Node(const Data &d, Node *n);
+    Node(const Data &d,Node* n =nullptr);
 };
 
 class LinkedList {
@@ -24,6 +24,7 @@ public:
     LinkedList(const LinkedList& list);
     const LinkedList& operator=(LinkedList rhs);
     void print(ostream &os);
+
     void pop_head();
     ~LinkedList();
 };

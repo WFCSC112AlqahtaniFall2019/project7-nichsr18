@@ -21,7 +21,8 @@ int main() {
     }
 
     Stack s;
-    //Queue q;
+    Queue q;
+    cout<<"created object"<<endl;
 
     //while loop to read csv file while adding to linked lists
     while(!inFile.eof()){
@@ -40,29 +41,29 @@ int main() {
         danceability=stod(danceabilityTemp);
         energy=stod(energyTemp);
         s.push_head(Data(songName, artist, danceability, energy));
-       //q.enqueue_tail(Data(songName, artist, danceability, energy));
+        q.enqueue_tail(Data(songName, artist, danceability, energy));
 
     }
+
     //output for stack
     bool print=true;
     while(print){
         outFile<<s.print()<<endl;
         print=s.pop_head();
     }
-    cout<<"here";
+
     inFile.close();
     outFile.close();
 
     //output using queued
-   /* outFile.open("../queued");
+    outFile.open("../queued");
     print=true;
     while(print){
         outFile<<q.print()<<endl;
         print=q.dequeue_head();
     }
     outFile.close();
-*/
-  ;
+
     //
     return 0;
 }

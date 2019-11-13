@@ -11,7 +11,7 @@ Stack::Stack() {
 bool Stack::pop_head() {
     if(head== nullptr)
         return false;
-   else if (head->next != nullptr) {
+    else if (head->next != nullptr) {
         // save location of where head points
         Node *curr = head;
         // head points to next node

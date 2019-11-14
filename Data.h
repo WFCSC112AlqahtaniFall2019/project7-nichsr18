@@ -15,7 +15,7 @@ public:
     double danceability;
     double energy;
     friend ostream& operator<<(ostream& os, const Data& d);
-    bool operator<(const Data& rhs);
+    bool operator<(const Data &rhs);
     Data(string n= "", string a="", double d=0.0, double e=0.0);
 
 };

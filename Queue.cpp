@@ -20,26 +20,26 @@ bool Queue::dequeue_head() {
     }
 
 }
-
+//adds data to tail
 void Queue::enqueue_tail(const Data &d) {
     Node *newNode= new Node(d);
-    if(tail==nullptr){
+    if(tail==nullptr){//case if queue is empty
         tail=newNode;
+        head=newNode;
     }else{
         tail->next=newNode;
         tail=newNode;
     }
 
-    if(head==nullptr){
-        head=newNode;
-    }
 }
 
+//constructor
 Queue::Queue() {
     head=nullptr;
     tail=nullptr;
 }
 
+//returns data at head to be printed in main
 Data Queue::print() {
     return head->data;
 }

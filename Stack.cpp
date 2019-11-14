@@ -4,6 +4,7 @@
 
 #include "Stack.h"
 
+//constructor
 Stack::Stack() {
     head= nullptr;
 }
@@ -38,6 +39,7 @@ void Stack::push_head(const Data & d) {
     }
 }
 
+//returns data at head to print in main
 Data Stack::print() {
     return head->data;
 }
